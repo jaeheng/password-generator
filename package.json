@@ -1,0 +1,36 @@
+{
+  "name": "Password Generator",
+  "version": "1.0.0",
+  "description": "Generator Password, used to generate the size of the write letters, numbers, special characters of the password",
+  "main": "index.html",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaeheng/password-generator.git"
+  },
+  "keywords": [
+    "password generator",
+    "password"
+  ],
+  "author": "jaeheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaeheng/password-generator/issues"
+  },
+  "homepage": "https://github.com/jaeheng/password-generator#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}

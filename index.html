@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+	<title>Password Generator</title>
+	<link rel="stylesheet" href="dist/app.min.css">
+</head>
+<body>
+	<img src="dist/images/logo.jpg" alt="logo" class="logo">
+	<h1>Password Generator</h1>
+	<form action="api/index.php" method="get" id="password_form" class="form">
+		<label for="username">username</label>
+		<input type="text" id="username" name="username" placeholder="网站用户名" value="jaeheng" required />
+		<label for="website">website</label>
+		<input type="text" id="website" name="website" placeholder="网站域名" value="qq.com" required />
+		<label for="salt">authenticator</label>
+		<input type="text" id="salt" name="salt" placeholder="标识码" value="Zzh041" required />
+		<div id="password" class="result"></div>
+		<input type="submit" value="查询" id="submit" class="btn">
+	</form>
+	<script src="dist/app.min.js"></script>
+	<script>
+		password.init();
+	</script>
+</body>
+</html>

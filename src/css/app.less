@@ -1,0 +1,70 @@
+// variables
+@red : #FF0066;
+
+// Reset
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: Verdana,'微软雅黑','Microsoft Yahei';
+	font-size: 14px;
+	line-height: 1.5;
+	width:374px;
+	margin:0 auto;
+	max-width: 100%;
+}
+
+// 正文
+.logo{
+	width:80px;
+	height: 80px;
+	display: block;
+	margin:30px auto 20px;
+}
+h1{
+	font-size: 24px;
+	text-align: center;
+	padding: 0 0 20px;
+}
+.form{
+	margin:0 20px;
+	label{
+		display: block;
+		font-size: 16px;
+		color:#666;
+	}
+	label,input{
+		width:100%;
+		margin-bottom: 10px;
+		outline: none;
+	}
+	input[type=text]{
+		height: 32px;
+		font-family: Verdana;
+		text-indent: 10px;
+		border:1px solid #eee;
+	}
+	.result{
+		padding:20px 0;
+		font-size:24px;
+		text-align: center;
+		color:@red;
+	}
+	.btn{
+		display: block;
+		width:50%;
+		margin:0 auto;
+	}
+}
+.btn{
+	border:1px solid @red;
+	color:#fff;
+	background-color: @red;
+	border-radius: 4px;
+	padding: 10px 0;
+	&:hover{
+		background-color: darken(@red,10%);
+		cursor: pointer;
+	}
+}
