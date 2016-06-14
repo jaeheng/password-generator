@@ -55,7 +55,7 @@ class api {
 
 	// 保存密码到文件
 	function savePassword($pwd) {
-		$str = 'username:' . $this->username . ' website:' . $this->website . ' password:' . $pwd . "\n";
+		$str = 'username:' . $this->username . ' website:' . $this->website . ' salt:' . $pwd . "\n";
 		$myfile = fopen("./logs/pwd_logs.txt", "a") or die("Unable to open file!");
 		fwrite($myfile, $str);
 		fclose($myfile);
