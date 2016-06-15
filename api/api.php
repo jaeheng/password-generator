@@ -22,7 +22,7 @@ class api {
 	 * @param  string $website          网站域名
 	 * @param  string $username         用户名
 	 * @param  string $specialCharacter 特殊字符
-	 * @return string                   生成的含有大小写字母、数字、特殊字符的10-12位的密码
+	 * @return string                   生成的含有大小写字母、数字、特殊字符的11-12位的密码
 	 */
 	function createPassword() {
 
@@ -34,8 +34,8 @@ class api {
 		// 拼接字符串
 		$str = $username . '@' . $website . '&&' . $salt;
 		// md5加密并取前10位，最后添加特殊字符
-		$str = mb_strcut(md5($str), 0,10) . $specialCharacter;
-
+		$str = mb_strcut(base64_encode(md5($str)), 0,10) . $specialCharacter;
+		
 		// 未匹配出小写字母， 添加a
 		if(!preg_match('/[a-z]+/', $str)){
 		    $str .= 'a';
@@ -45,11 +45,11 @@ class api {
 		    $str .= 'A';
 		}
 		// 未匹配出数字， 添加0
-		if(!preg_match('/[1-9]\d+/', $str)){
+		if(!preg_match('/[0-9]\d*/', $str)){
 			$str .= '0';
 		}
 		$this->savePassword($str);
-		// 最终生成了一个，含有大小写字母、数字、特殊字符的10-12位的密码
+		// 最终生成了一个，含有大小写字母、数字、特殊字符的11-12位的密码
 		return $str;
 	}
 
