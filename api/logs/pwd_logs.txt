@@ -49,3 +49,4 @@ username:jiangqian website:126.com password:58509c8cd0/A
 username:jaeheng website:baidu.com password:5968a2295a/A
 username:jaeheng website:baidu.com password:5968a2295a/A
 username:jaeheng website:baidu.com password:5968a2295a/A
+username:jaeheng website:baidu.com salt:5968a2295a/A
