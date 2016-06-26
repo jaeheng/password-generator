@@ -48,7 +48,7 @@ class api {
 		if(!preg_match('/[0-9]\d*/', $str)){
 			$str .= '0';
 		}
-		$this->savePassword($str);
+		// $this->savePassword($str);
 		// 最终生成了一个，含有大小写字母、数字、特殊字符的11-12位的密码
 		return $str;
 	}
